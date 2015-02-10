@@ -44,7 +44,7 @@ The user provider must implement
                            :class:`Symfony\\Component\\Security\\Core\\Exception\\UnsupportedAccountException`
                            exception.
 * ``supportsClass()``: Receives an account's class and returns whether the class
-                       is supported by the provider. 
+                       is supported by the provider.
 
 .. tip::
 
@@ -374,7 +374,7 @@ implement :class:`Symfony\\Component\\Security\\Core\\User\\UserProviderInterfac
 
 .. index::
    single: Security; Chain Provider
-   
+
 Chain Provider
 ~~~~~~~~~~~~~~
 
@@ -384,7 +384,7 @@ between several other user providers.
 .. configuration-block::
 
     .. code-block:: yaml
-    
+
         # app/config/security.yml
         security:
             providers:
@@ -395,9 +395,9 @@ between several other user providers.
                         foo: { password: test }
                 dao_provider:
                     entity: { class: Acme\MyBundle\Entity\User, property: username }
-                    
+
     .. code-block:: xml
-    
+
         <!-- app/config/security.xml -->
         <config>
             <provider name="default_provider" providers="in_memory, dao_provider" />
@@ -408,9 +408,9 @@ between several other user providers.
                 <entity class="Acme\MyBundle\Entity\User" property="username" />
             </provider>
         </config>
-        
+
     .. code-block:: php
-    
+
         // app/config/security.php
         $container->loadFromExtension('security', array(
             'providers' => array(
@@ -443,11 +443,11 @@ user providers suits your needs. In this example, we will set-up a user provider
 using Doctrine Mongo DB.
 
 We assume that you have the DoctrineMongoDBBundle already installed. This bundle
-ships with a user provider similar to the built-in entity provider, but for 
+ships with a user provider similar to the built-in entity provider, but for
 documents.
 
 First, we need to wire the user provider service with the Dependency Injection
-container, and second, we need to define this custom user provider in the 
+container, and second, we need to define this custom user provider in the
 security configuration.
 
 .. configuration-block::
@@ -459,12 +459,12 @@ security configuration.
             my.mongodb.provider:
                 parent: doctrine.odm.mongodb.security.user.provider
                 arguments: [Acme\MyBundle\Document\User, username]
-        
+
         security:
             providers:
                 custom_provider:
                     id: my.mongodb.provider
-        
+
     .. code-block:: xml
 
         <!-- app/config/security.xml -->
@@ -474,7 +474,7 @@ security configuration.
                 <argument>username</argument>
             </service>
         </services>
-        
+
         <security:config>
             <provider name="custom_provider" id="my.mongodb.provider" />
         </security:config>
@@ -487,7 +487,7 @@ security configuration.
             ->addArgument('Acme\MyBundle\Document\User')
             ->addArgument('username')
         ;
-        
+
         $container->loadFromExtension('security', array(
             'providers' => array(
                 'custom_provider' => array(

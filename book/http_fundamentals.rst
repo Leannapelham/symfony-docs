@@ -118,7 +118,7 @@ from the xkcd web server:
    :align: center
 
 Translated into HTTP, the response sent back to the browser will look something
-like this: 
+like this:
 
 .. code-block:: text
 
@@ -421,7 +421,7 @@ you'll learn how a controller can render templates, allowing your "presentation"
 code (i.e. anything that actually writes out HTML) to live in a separate
 template file. This frees up the controller to worry only about the hard
 stuff: interacting with the database, handling submitted data, or sending
-email messages. 
+email messages.
 
 Symfony2: Build your App, not your Tools.
 -----------------------------------------

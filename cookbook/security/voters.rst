@@ -46,8 +46,8 @@ values:
 * ``VoterInterface::ACCESS_DENIED``: The user is not allowed to access the application
 
 In this example, we will check if the user's IP address matches against a list of
-blacklisted addresses. If the user's IP is blacklisted, we will return 
-``VoterInterface::ACCESS_DENIED``, otherwise we will return 
+blacklisted addresses. If the user's IP is blacklisted, we will return
+``VoterInterface::ACCESS_DENIED``, otherwise we will return
 ``VoterInterface::ACCESS_ABSTAIN`` as this voter's purpose is only to deny
 access, not to grant access.
 

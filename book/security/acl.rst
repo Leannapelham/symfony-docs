@@ -64,7 +64,7 @@ First, we need to configure the connection the ACL system is supposed to use:
     The ACL system requires at least one Doctrine DBAL connection to be
     configured. However, that does not mean that you have to use Doctrine for
     mapping your domain objects. You can use whatever mapper you like for your
-    objects, be it Doctrine ORM, Mongo ODM, Propel, or raw SQL, the choice is 
+    objects, be it Doctrine ORM, Mongo ODM, Propel, or raw SQL, the choice is
     yours.
 
 After the connection is configured, we have to import the database structure.

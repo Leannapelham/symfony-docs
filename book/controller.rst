@@ -420,7 +420,7 @@ object is the end-product of the internal sub-request::
         ));
 
         // further modify the response or return it directly
-        
+
         return $response;
     }
 
@@ -449,7 +449,7 @@ value to each variable.
     a shortcut for core Symfony2 functionality. A forward can be accomplished
     directly via the ``http_kernel`` service. A forward returns a ``Response``
     object::
-    
+
         $httpKernel = $this->container->get('http_kernel');
         $response = $httpKernel->forward('AcmeHelloBundle:Hello:fancy', array(
             'name'  => $name,
@@ -488,7 +488,7 @@ The Symfony templating engine is explained in great detail in the
 
     The ``renderView`` method is a shortcut to direct use of the ``templating``
     service. The ``templating`` service can also be used directly::
-    
+
         $templating = $this->get('templating');
         $content = $templating->render('AcmeHelloBundle:Hello:index.html.twig', array('name' => $name));
 
@@ -604,12 +604,12 @@ Let's show an example where we're processing a form submit::
     {
         if ('POST' === $this->get('request')->getMethod()) {
             // do some sort of processing
-            
+
             $this->get('session')->setFlash('notice', 'Your changes were saved!');
 
             return new RedirectResponse($this->generateUrl(...));
         }
-        
+
         return $this->render(...);
     }
 
@@ -628,7 +628,7 @@ could be used to render the message:
         {% endif %}
 
     .. code-block:: php
-    
+
         <?php if ($view['session']->hasFlash('notice') ?>
             <div class="flash-notice">
                 <?php echo $view['session']->getFlash('notice') ?>
@@ -652,7 +652,7 @@ headers and content that's sent back to the client::
 
     // create a simple Response with a 200 status code (the default)
     $response = new Response('Hello '.$name, 200);
-    
+
     // create a JSON-response with a 200 status code
     $response = new Response(json_encode(array('name' => $name)));
     $response->headers->set('Content-Type', 'application/json');

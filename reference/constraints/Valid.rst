@@ -110,7 +110,7 @@ their properties. Furthermore, ``Author`` stores an ``Address`` instance in the
              * @assert:NotBlank
              */
             protected $lastName;
-            
+
             protected $address;
         }
 
@@ -120,13 +120,13 @@ their properties. Furthermore, ``Author`` stores an ``Address`` instance in the
         use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints\NotBlank;
         use Symfony\Component\Validator\Constraints\MaxLength;
-        
+
         class Address
         {
             protected $street;
 
             protected $zipCode;
-            
+
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('street', new NotBlank());
@@ -139,15 +139,15 @@ their properties. Furthermore, ``Author`` stores an ``Address`` instance in the
         use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints\NotBlank;
         use Symfony\Component\Validator\Constraints\MinLength;
-        
+
         class Author
         {
             protected $firstName;
 
             protected $lastName;
-            
+
             protected $address;
-            
+
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('firstName', new NotBlank());
@@ -185,7 +185,7 @@ invalid address. To prevent that, we add the ``Valid`` constraint to the
         class Author
         {
             /* ... */
-            
+
             /**
              * @assert:Valid
              */
@@ -197,11 +197,11 @@ invalid address. To prevent that, we add the ``Valid`` constraint to the
         // src/Acme/HelloBundle/Author.php
         use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints\Valid;
-        
+
         class Author
         {
             protected $address;
-            
+
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('address', new Valid());

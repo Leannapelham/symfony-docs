@@ -18,9 +18,9 @@ Options
   * `array <http://php.net/is_array>`_
   * `bool <http://php.net/is_bool>`_
   * `callable <http://php.net/is_callable>`_
-  * `float <http://php.net/is_float>`_ 
+  * `float <http://php.net/is_float>`_
   * `double <http://php.net/is_double>`_
-  * `int <http://php.net/is_int>`_ 
+  * `int <http://php.net/is_int>`_
   * `integer <http://php.net/is_integer>`_
   * `long <http://php.net/is_long>`_
   * `null <http://php.net/is_null>`_

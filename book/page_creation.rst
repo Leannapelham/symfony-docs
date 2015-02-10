@@ -82,7 +82,7 @@ of the ``AppKernel`` class:
             // ...
             new Acme\StudyBundle\AcmeStudyBundle(),
         );
-        
+
         // ...
 
         return $bundles;
@@ -464,12 +464,12 @@ about each of these directories in later chapters.
     or ``require`` statements. Instead, Symfony2 uses the namespace of a class
     to determine its location and automatically includes the file on your
     behalf the instant you need a class::
-    
+
         $loader->registerNamespaces(array(
             'Acme' => __DIR__.'/../src',
             // ...
         ));
-    
+
     With this configuration, Symfony2 will look inside the ``src`` directory
     for any class in the ``Acme`` namespace (your pretend company's namespace).
     For autoloading to work, the class name and path to the file must follow
@@ -784,9 +784,9 @@ call the ``prod`` front controller instead::
 
    If you open the ``web/app.php`` file, you'll find that it's configured explicitly
    to use the ``prod`` environment::
-   
+
        $kernel = new AppCache(new AppKernel('prod', false));
-   
+
    You can create a new front controller for a new environment by copying
    this file and changing ``prod`` to some other value.
 

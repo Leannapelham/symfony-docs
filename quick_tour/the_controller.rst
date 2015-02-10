@@ -235,8 +235,8 @@ In this example, the resource will be cached for a day. But you can also use
 validation instead of expiration or a combination of both if that fits your
 needs better.
 
-Resource caching is managed by the Symfony2 built-in reverse proxy. But because 
-caching is managed using regular HTTP cache headers, you can replace the 
+Resource caching is managed by the Symfony2 built-in reverse proxy. But because
+caching is managed using regular HTTP cache headers, you can replace the
 built-in reverse proxy with Varnish or Squid and easily scale your application.
 
 .. note::

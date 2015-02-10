@@ -33,7 +33,7 @@ Options
     By default, if the user enters a non-integer number, it will be rounded
     down. There are several other rounding methods, and each is a constant
     on the :class:`Symfony\\Component\\Form\\DataTransformer\\IntegerToLocalizedStringTransformer`:
-    
+
     * ``IntegerToLocalizedStringTransformer::ROUND_DOWN``
         Rounding mode to round towards zero.
     * ``IntegerToLocalizedStringTransformer::ROUND_FLOOR``

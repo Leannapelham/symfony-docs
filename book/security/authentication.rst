@@ -305,14 +305,14 @@ yourself::
             ));
         }
     }
-    
+
 .. note::
-    
+
     The ``$error`` variable references an instance of
-    :class:`Symfony\\Component\\Security\\Core\\Exception\\AuthenticationException`, 
+    :class:`Symfony\\Component\\Security\\Core\\Exception\\AuthenticationException`,
     or one of its sub-classes. This exception might contain sensitive information,
     so you should be very careful how much of the contained information you want
-    to expose on your production system. 
+    to expose on your production system.
 
 And the corresponding template might look like this:
 

@@ -36,16 +36,16 @@ Options
     the currency symbol that should be shown by the text box. Depending on
     the currency - the currency symbol may be shown before or after the input
     text field.
-    
+
     This can also be set to false to hide the currency symbol.
 
 * ``divisor`` [type: integer, default: ``1``]
     If, for some reason, you need to divide your starting value by a number
     before rendering it to the user, you can use the ``divisor`` option.
     For example:
-    
+
     .. code-block:: php
-    
+
         $builder->add('price', 'money', array(
             'divisor' => 100,
         ));

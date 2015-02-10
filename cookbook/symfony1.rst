@@ -225,7 +225,7 @@ In Symfony2, the bundles are activated inside the application kernel::
             // ...
             new Acme\HelloBundle\AcmeHelloBundle(),
         );
-        
+
         return $bundles;
     }
 

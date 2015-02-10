@@ -40,15 +40,15 @@ pattern of class extension:
     class HandleUndefinedMethodEvent extends Event
     {
         protected $subject;
-        
+
         protected $method;
-        
+
         protected $arguments;
-        
+
         protected $returnValue;
-        
+
         protected $isProcessed = false;
-    
+
         public function __construct($subject, $method, $arguments)
         {
             $this->subject = $subject;

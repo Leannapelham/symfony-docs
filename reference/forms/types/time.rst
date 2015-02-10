@@ -64,15 +64,15 @@ Options
 -------
 
 * ``widget`` [type: string, default: ``choice``]
-    Type of widget used for this form type.  Can be ``text`` or ``choice``.  
-    
+    Type of widget used for this form type.  Can be ``text`` or ``choice``.
+
       * ``text``: renders a single input of type text.  User's input is validated based on the ``format`` option.
       * ``choice``: renders two select inputs (three select inputs if ``with_seconds`` is set to ``true``).
 
 * ``input`` [type: string, default: ``datetime``]
-    The value of the input for the widget.  Can be ``string``, ``datetime`` or ``array``.  The form type input value will be returned 
+    The value of the input for the widget.  Can be ``string``, ``datetime`` or ``array``.  The form type input value will be returned
     in the format specified.  The value "12:30" with the ``input`` option set to ``array`` would return:
-    
+
     .. code-block:: php
 
         array('hour' => '12', 'minute' => '30' )

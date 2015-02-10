@@ -37,7 +37,7 @@ Basic Usage
             properties:
                 firstName:
                     - MinLength: 3
-    
+
     .. code-block:: xml
 
         <!-- src/Acme/HelloBundle/Resources/config/validation.xml -->

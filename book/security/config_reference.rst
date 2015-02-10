@@ -11,12 +11,12 @@ Configuration Reference
         # app/config/security.yml
         security:
             access_denied_url: /foo/error403
-            
+
             access_decision_manager:
                 strategy: affirmative
                 allow_if_all_abstain: false
                 allow_if_equal_granted_denied: true
-            
+
             acl:
                 connection: default # any name configured in doctrine.dbal section
                 tables:

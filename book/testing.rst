@@ -693,7 +693,7 @@ The Client used by functional tests creates a Kernel that runs in a special
                     type="stream"
                     path="%kernel.logs_dir%/%kernel.environment%.log"
                     level="debug"
-                 />               
+                 />
             </monolog:config>
         </container>
 
@@ -717,7 +717,7 @@ The Client used by functional tests creates a Kernel that runs in a special
                 'main' => array('type' => 'stream',
                                 'path' => '%kernel.logs_dir%/%kernel.environment%.log'
                                 'level' => 'debug')
-           
+
         )));
 
 You can also change the default environment (``test``) and override the

@@ -29,8 +29,8 @@ Options
 Example:
 --------
 
-Let's validate an array with two indexes ``firstName`` and ``lastName``. The 
-value of ``firstName`` must not be blank, while the value of ``lastName`` must 
+Let's validate an array with two indexes ``firstName`` and ``lastName``. The
+value of ``firstName`` must not be blank, while the value of ``lastName`` must
 not be blank with a minimum length of four characters. Furthermore, both keys
 may not exist in the array.
 
@@ -96,11 +96,11 @@ may not exist in the array.
         use Symfony\Component\Validator\Constraints\NotNull;
         use Symfony\Component\Validator\Constraints\NotBlank;
         use Symfony\Component\Validator\Constraints\MinLength;
-        
+
         class Author
         {
             private $options = array();
-            
+
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('options', new Collection(array(

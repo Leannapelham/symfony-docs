@@ -32,10 +32,10 @@ Available Options
 * ``callback``: [type: string|array]
     This is a static callback method that can be used instead of the ``choices``
     option to return the choices array.
-    
+
     If you pass a string method name (e.g. ``getGenders``), that static method
     will be called on the validated class.
-    
+
     If you pass an array (e.g. ``array('Util', 'getGenders')``), it follows
     the normal callable syntax where the first argument is the class name
     and the second argument is the method name.
@@ -119,11 +119,11 @@ as an array.
         // src/Acme/HelloBundle/Author.php
         use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints\Choice;
-        
+
         class Author
         {
             protected $gender;
-            
+
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('gender', new Choice(

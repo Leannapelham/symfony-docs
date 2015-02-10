@@ -380,7 +380,7 @@ Symfony2 will discover these files and use them when translating either
     read "Symfony2 is really great" in the default locale.
 
     The choice of which method to use is entirely up to you, but the "keyword"
-    format is often recommended. 
+    format is often recommended.
 
     Additionally, the ``php`` and ``yaml`` file formats support nested ids to
     avoid repeating yourself if you use keywords instead of real text for your

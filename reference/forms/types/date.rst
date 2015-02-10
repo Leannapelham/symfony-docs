@@ -69,8 +69,8 @@ Options
 -------
 
 * ``widget`` [type: string, default: ``choice``]
-    Type of widget used for this form type.  Can be ``text`` or ``choice``.  
-    
+    Type of widget used for this form type.  Can be ``text`` or ``choice``.
+
       * ``text``: renders a single input of type text. User's input is validated
         based on the ``format`` option.
 
@@ -83,7 +83,7 @@ Options
     The value of the input for the widget.  Can be ``string``, ``datetime``
     or ``array``.  The form type input value will be returned  in the format
     specified.  The input of ``April 21th, 2011`` as an array would return:
-    
+
     .. code-block:: php
 
         array('month' => 4, 'day' => 21, 'year' => 2011 )
@@ -98,7 +98,7 @@ Options
     Option passed to the IntlDateFormatter class, used to transform user input
     into the proper format. This is critical when the ``widget`` option is
     set to ``text``, and will define how to transform the input.
-    
+
 * ``pattern`` [type: string, default: null]
     This option is only relevant when the ``widget`` is set to ``choice``.
     The default pattern is based off the ``format`` option, and tries to

@@ -167,7 +167,7 @@ be added to all configured connections.
         </container>
 
     .. code-block:: php
-    
+
         // app/config/config.php
         $container->loadFromExtension('doctrine', array(
             'dbal' => array(

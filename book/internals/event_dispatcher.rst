@@ -149,7 +149,7 @@ the dispatcher calls the ``myListener::onFooAction`` method and passes the
     class myListener
     {
         // ...
-    
+
         public function onFooAction(Event $event)
         {
             // do something
@@ -190,11 +190,11 @@ passes an instance of ``Symfony\Component\HttpKernel\Event\FilterResponseEvent``
 
    So far, you've seen how PHP objects can be registered as listeners. You
    can also register PHP `Closures`_ as event listeners:
-   
+
    .. code-block:: php
-   
+
        use Symfony\Component\EventDispatcher\Event;
-   
+
        $dispatcher->addListener('onFooAction', function(Event $event) {
            // will be executed when the onFooAction event is dispatched
        });
@@ -221,13 +221,13 @@ define and document your event:
 .. code-block:: php
 
     namespace Acme\StoreBundle;
-    
+
     final class Events
     {
         /**
          * The onStoreOrder event is thrown each time an order is created
          * in the system.
-         * 
+         *
          * The event listener receives an Acme\StoreBundle\Event\FilterOrderEvent
          * instance.
          *
@@ -258,14 +258,14 @@ object. Create an ``Event`` class that makes this possible:
 .. code-block:: php
 
     namespace Acme\StoreBundle\Event;
-    
+
     use Symfony\Component\EventDispatcher\Event;
     use Acme\StoreBundle\Order;
-    
+
     class FilterOrderEvent extends Event
     {
         protected $order;
-        
+
         public function __construct(Order $order)
         {
             $this->order = $order;
@@ -275,7 +275,7 @@ object. Create an ``Event`` class that makes this possible:
         {
             return $this->order;
         }
-    } 
+    }
 
 Each listener now has access to to ``Order`` object via the ``getOrder``
 method.
@@ -297,7 +297,7 @@ each listener of that event:
     // the order is somehow created or retrieved
     $order = new Order();
     // ...
-    
+
     // create the FilterOrderEvent and dispatch it
     $event = new FilterOrderEvent($order);
     $dispatcher->dispatch(Events::onStoreOrder, $event);
@@ -385,7 +385,7 @@ and ``onStoreOrder`` events:
 .. code-block:: php
 
     namespace Acme\StoreBundle\Event;
-    
+
     use Symfony\Component\EventDispatcher\EventSubscriberInterface;
     use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 
@@ -444,7 +444,7 @@ via the :method:`Symfony\\Component\\EventDispatcher\\Event::stopPropagation` me
    public function onStoreOrder(FilterOrderEvent $event)
    {
        // ...
-       
+
        $event->stopPropagation();
    }
 

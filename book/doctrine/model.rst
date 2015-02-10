@@ -42,42 +42,42 @@ model. If you're building a content management system, then you will
 need a ``Page`` model.
 
 .. code-block:: php
-    
+
     <?php
-    
+
     namespace Blog;
-    
+
     class Post
     {
         private $title;
         private $body;
         private $createdAt;
         private $updatedAt;
-        
+
         public function __construct($title, $body)
         {
             $this->title     = $title;
             $this->body      = $body;
             $this->createdAt = new \DateTime();
         }
-        
+
         public function setTitle($title)
         {
             $this->title     = $title;
             $this->updatedAt = new \DateTime();
         }
-        
+
         public function setBody($body)
         {
             $this->body      = $body;
             $this->updatedAt = new \DateTime();
         }
-        
+
         public function getTitle()
         {
             return $this->title;
         }
-        
+
         public function getBody()
         {
             return $this->body;

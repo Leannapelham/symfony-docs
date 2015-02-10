@@ -53,7 +53,7 @@ Glossary
         an application. Instead of creating services directly, the developer
         *trains* the service container (via configuration) on how to create
         the services. The service container takes care of lazily instantiating
-        and injecting dependent services. See :doc:`/book/service_container` 
+        and injecting dependent services. See :doc:`/book/service_container`
         chapter.
 
    HTTP Specification
@@ -109,7 +109,7 @@ Glossary
         application or for just a part of it. See the
         :doc:`book/security/overview` chapters.
 
-   YAML 
+   YAML
         *YAML* is a recursive acronym for "YAML Ain't a Markup Language". It's a
         lightweight, humane data serialization language used extensively in
         Symfony2's configuration files.  See the :doc:`reference/YAML` reference

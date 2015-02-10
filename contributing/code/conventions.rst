@@ -72,7 +72,7 @@ must be used instead (where ``XXX`` is the name of the related thing):
 
 .. note::
 
-    While "setXXX" and "replaceXXX" are very similar, there is one notable 
-    difference: "setXXX" may replace, or add new elements to the relation. 
-    "replaceXXX" on the other hand is specifically forbidden to add new 
+    While "setXXX" and "replaceXXX" are very similar, there is one notable
+    difference: "setXXX" may replace, or add new elements to the relation.
+    "replaceXXX" on the other hand is specifically forbidden to add new
     elements, but most throw an exception in these cases.

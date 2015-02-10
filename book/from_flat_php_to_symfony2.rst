@@ -11,7 +11,7 @@ better software than with flat PHP, you'll see for yourself.
 In this chapter, you'll write a simple application in flat PHP, and then
 refactor it to be more organized. You'll travel through time, seeing the
 decisions behind why web development has evolved over the past several years
-to where it is now. 
+to where it is now.
 
 By the end, you'll see how Symfony2 can rescue you from mundane tasks and
 let you take back control of your code.
@@ -132,7 +132,7 @@ to the area of *your* code that processes user input and prepares the response.
 In this case, our controller prepares data from the database and then includes
 a template to present that data. With the controller isolated, you could
 easily change *just* the template file if you needed to render the blog
-entries in some other format (e.g. ``list.json.php`` for JSON format). 
+entries in some other format (e.g. ``list.json.php`` for JSON format).
 
 Isolating the Application (Domain) Logic
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -575,7 +575,7 @@ now quite a bit simpler:
 
 .. code-block:: html+php
 
-    <!-- src/Acme/BlogBundle/Resources/views/Blog/list.html.php --> 
+    <!-- src/Acme/BlogBundle/Resources/views/Blog/list.html.php -->
     <?php $view->extend('::layout.html.php') ?>
 
     <?php $view['slots']->set('title', 'List of Posts') ?>

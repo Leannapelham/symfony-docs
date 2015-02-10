@@ -66,7 +66,7 @@ For example, when the widget of a ``text`` type field is rendered, an ``input``
 .. code-block:: html+jinja
 
     {{ form_widget(form.name) }}
-    
+
     <input type="text" id="form_name" name="form[name]" required="required" value="foo" />
 
 Internally, Symfony uses the ``text_widget`` block from the ``div_layout.html.twig``
@@ -104,12 +104,12 @@ When rendering a form, you can choose which form theme(s) you want to apply.
     In this example, the customized block name is ``text_widget`` because you
     want to override the HTML ``widget`` for all ``text`` field types. If you
     need to customize textarea fields, you would customize ``textarea_widget``.
-    
+
     As you can see, the block name is a combination of the field type and
     which part of the field is being rendered (e.g. ``widget``, ``label``,
     ``errors``, ``row``). As such, to customize how errors are rendered for
     just input ``text`` fields, you should customize the ``text_errors`` block.
-    
+
     More commonly, however, you'll want to customize how errors are displayed
     across *all* fields. You can do this by customizing the ``field_errors``
     block. This takes advantage of field type inheritance. Specifically,
@@ -166,7 +166,7 @@ directly in the template that's actually rendering the form.
 
     {% block content %}
         {# render the form #}
-        
+
         {{ form_row(form.name) }}
     {% endblock %}
 
@@ -190,11 +190,11 @@ several (or all) forms in your application, read on to the next section.
 .. note::
     Be sure also to include the ``use`` statement somewhere in your template
     when using this method:
-   
+
     .. code-block:: jinja
-   
+
         {% use 'TwigBundle:Form:div_layout.html.twig' %}
-    
+
     This "imports" all of the blocks from the base ``div_layout.html.twig``
     template, which gives you access to the ``attributes`` block. In general,
     the ``use`` tag is helpful when your template *already* extends a base
@@ -237,7 +237,7 @@ tell Symfony to use the template via the ``form_theme`` tag:
 .. code-block:: html+jinja
 
     {% form_theme form 'AcmeDemoBundle:Form:fields.html.twig' %}
-    
+
     {{ form_widget(form.name) }}
 
 When the ``form.name`` widget is rendered, Symfony will use the ``text_widget``
@@ -305,18 +305,18 @@ If you'd like a certain form customization to be global to your application,
 you can accomplish this by making the form customizations to an external
 template and then importing it inside your application configuration:
 
-.. configuration-block:: 
+.. configuration-block::
 
     .. code-block:: yaml
-        
+
         # app/config/config.yml
         twig:
             form:
                 resources: ['AcmeDemoBundle:Form:fields.html.twig']
             # ...
-    
+
     .. code-block:: xml
-    
+
         <!-- app/config/config.xml -->
         <twig:config ...>
             <twig:form>
@@ -356,7 +356,7 @@ part of the field is being customized. For example:
             <input type="text" {{ block('attributes') }} value="{{ value }}" />
         </div>
     {% endblock %}
-    
+
     {{ form_widget(form.name) }}
 
 Here, the ``_product_name_widget`` defines the template to use for the field
@@ -382,7 +382,7 @@ You can also override the markup for an entire field row using the same method:
             {{ form_widget(form) }}
         </div>
     {% endblock %}
-    
+
     {{ form_row(form.name) }}
 
 Other Common Customizations

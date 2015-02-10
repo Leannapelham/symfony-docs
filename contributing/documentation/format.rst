@@ -136,17 +136,17 @@ Installing the configuration-block Sphinx extension
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  * Download the extension from the `configuration-block source`_ repository
-  
+
  * Copy the ``configurationblock.py`` to the ``_exts`` folder under your
    source folder (where ``conf.py`` is located)
-   
+
  * Add the following to the ``conf.py`` file:
 
 .. code-block:: py
-    
+
     # ...
     sys.path.append(os.path.abspath('_exts'))
-    
+
     # ...
     # add configurationblock to the list of extensions
     extensions = ['configurationblock']

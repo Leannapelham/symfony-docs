@@ -68,11 +68,11 @@ not exceed a maximum size of 128 kilobytes and is a PDF document.
         // src/Acme/HelloBundle/Author.php
         use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints\File;
-        
+
         class Author
         {
             private $filename;
-            
+
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('filename', new File(array(

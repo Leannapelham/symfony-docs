@@ -12,8 +12,8 @@ refers to the process of deciding whether a user is allowed to perform an
 action or not (authentication is always performed before authorization).
 
 This document is a quick overview over these main concepts, but it barely scratches
-the surface. If you want to get to know the real power of Symfony2's security 
-layer, you should also read these more specific documents: 
+the surface. If you want to get to know the real power of Symfony2's security
+layer, you should also read these more specific documents:
 :doc:`Users </book/security/users>`,
 :doc:`Authentication </book/security/authentication>`, and
 :doc:`Authorization </book/security/authorization>`.
@@ -137,7 +137,7 @@ As you can see, the configuration has four sections:
   roles.
 
 To sum up the workflow, the firewall authenticates the client based on the
-submitted credentials and the user created by the user provider. Finally, 
+submitted credentials and the user created by the user provider. Finally,
 access control is used to protect specific resources.
 
 Authentication
